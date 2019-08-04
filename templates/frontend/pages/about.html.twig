@@ -1,0 +1,71 @@
+{# Kế thừa layout frontend #}
+{% extends "frontend/layouts/layouts.html.twig" %}
+
+{# Nội dung trong block title #}
+{% block title %}
+AboutUs
+{% endblock %}
+{# End Nội dung trong block title #}
+
+{# Nội dung trong block headline #}
+{% block headline %}
+Ve chung toi
+{% endblock %}
+{# End Nội dung trong block headline #}
+
+{# Nội dung trong block content #}
+{% block content %}
+  <!-- Page Content -->
+  <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">About Us
+         
+        </h1>
+    
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="home.php">Home</a>
+          </li>
+          <li class="breadcrumb-item active">About</li>
+        </ol>
+   <!-- Content Row -->
+   <div class="row">
+    <!-- Map Column -->
+    <div class="col-lg-8 mb-4">
+      <!-- Embedded Google Map -->
+      <img src="/techshop/img/about.jpg"  width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+    </div>
+    <!-- Contact Details Column -->
+    <div class="col-lg-4 mb-4">
+      <h3>About Us</h3>
+      <p>
+        Công ty TNHH Thiết bị và Công nghệ Minh Hà hay còn gọi là Minh Hà Group được thành lập ngày 28/02/2011 tại Đại Vĩ – Liên Hà – Đông Anh – Hà Nội. Minh Hà Group tự hào là một doanh nghiệp trẻ đã có những bước tiến vượt bậc, gặt hái được nhiều thành công và khẳng định được thương hiệu của mình trong lĩnh vực kinh doanh linh kiện điện tử, led, nghiên cứu phát triển công nghệ cao và sản xuất theo đơn đặt hàng của các tổ chức lớn.
+      </p>
+      <p>
+        Phone: (84.28) 7300 6835
+      </p>
+      <p>
+       Email:
+        <a href="mailto:info@CongNgheMinhHa.vn">info@CongNgheMinhHa.vn
+        </a>
+      </p>
+      <p>
+        Open: Monday - Friday from 9:00 AM to 5:00 PM
+      </p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+{# End Nội dung trong block content #}
+      

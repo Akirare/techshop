@@ -1,0 +1,25 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="home.php">Minh Hà</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="product.php">Products</a>
+          {% if session['username'] %}
+          <!-- Nếu đã đăng nhập thì hiển thị nút Đăng xuất -->
+          <a class="nav-link" href="logout.php">Log out</a>
+          <a class="btn btn-outline-success my-2 my-sm-0" style="border-color:#ffe484;" href="#"><i>[User: {{ session['username'] }}]</i></a>
+          {% else %}
+          <a class="nav-item nav-link" href="login.php">Log in</a> 
+          {% endif %}
+          <a class="nav-item nav-link" href="about.php">About</a>
+          <a class="nav-item nav-link" href="contact.php">Contact</a>
+        </div>
+    </div>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Nội dung tìm kiếm" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
+  </form>
+  </nav>

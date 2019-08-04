@@ -1,0 +1,87 @@
+{# Kế thừa layout frontend #}
+{% extends "frontend/layouts/layouts.html.twig" %}
+
+{# Nội dung trong block title #}
+{% block title %}
+Login
+{% endblock %}
+{# End Nội dung trong block title #}
+
+{# Nội dung trong block headline #}
+{% block headline %}
+Đăng nhập
+{% endblock %}
+{# End Nội dung trong block headline #}
+
+{# Nội dung trong block content #}
+{% block content %}
+<style type="text/css">
+    .product{
+        margin: 10px 10px 10px 10px;
+        padding: 5px 5px 5px 5px; 
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px black;
+    }
+    .product:hover{
+        background:steelblue;
+
+    }
+        .product {
+            height: 180px;
+        }
+    
+</style>
+<div style="height: 10px;"></div>
+
+<h2><div align="center">Our Products</div></h2>
+<div class="container">
+    <div class="row">
+    {% for hinhsanpham in ds_hinhsanpham %}
+        <div class="col-md-4">
+        <div class="product">
+            <div class="row">
+                <div class="col-md-4 col-xs-6">
+                    <div class="mx-auto row productImg">
+                        <img style="height: 100%; width: 100%; object-fit: cover;" src="/techshop/assets/uploads/{{ hinhsanpham.hsp_tentaptin }}" class="img-fluid" width="100px"/>
+                    </div>
+                    <div class="row mx-auto">
+                        <span style="color: blue;"><small><b>{{ hinhsanpham.sp_gia }}</b></small></span>
+                    </div>
+                    
+                </div>
+                <div class="col-md-8 col-xs-6" style="font-size: 1.1em;">
+                    <b>{{ hinhsanpham.sp_ten }}</b><br/>
+                    {{ hinhsanpham.sp_mota_ngan }}<br/>
+                    <p>
+                        {{ hinhsanpham.sp_mota_chitiet }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+</div>
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/techshop/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="/techshop/assets/vendor/popperjs/popper.min.js"></script>
+    <script src="/techshop/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/techshop/assets/vendor/feather/feather.min.js"></script>
+
+<!-- jquery-validation -->
+<script src="/techshop/assets/vendor/jquery-validation/jquery.validate.min.js"></script>
+<script src="/techshop/assets/vendor/jquery-validation/localization/messages_vi.min.js"></script>
+
+<!-- Custom script - Các file js do mình tự viết -->
+<script src="/techshop/assets/frontend/js/app.js"></script>
+
+<!-- Block custom-scripts - Đục lỗ trên giao diện bố cục chung, đặt tên là `custom-scripts` -->
+<!-- End block custom-scripts -->
+
+
+
+{% endblock %}
+{# End Nội dung trong block content #}

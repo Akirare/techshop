@@ -1,0 +1,44 @@
+{# Kế thừa layout backend #}
+{% extends "backend/layouts/layout.html.twig" %}
+
+{# Nội dung trong block title #}
+{% block title %}
+Thêm mới Loại sản phẩm
+{% endblock %}
+{# End Nội dung trong block title #}
+
+{# Nội dung trong block headline #}
+{% block headline %}
+Thêm mới Loại sản phẩm
+{% endblock %}
+{# End Nội dung trong block headline #}
+
+{# Nội dung trong block content #}
+{% block content %}
+<form name="frmKhuyenMai" id="frmKhuyenMai" method="post" action="/techshop/backend/khuyenmai/create.php">
+    <div class="form-group">
+        <label for="km_ma">Mã khuyến mãi</label>
+        <input type="text" class="form-control" id="km_ma" name="km_ma" placeholder="Mã khuyến mãi" readonly>
+        <small id="km_maHelp" class="form-text text-muted">Mã khuyến mãi không được hiệu chỉnh.</small>
+    </div>
+    <div class="form-group">
+        <label for="km_ten">Tên loại khuyến mãi</label>
+        <input type="text" class="form-control" id="km_ten" name="km_ten" placeholder="Tên loại khuyến mãi">
+    </div>
+    <div class="form-group">
+        <label for="km_noidung">Nội dung khuyến mãi</label>
+        <input type="text" class="form-control" id="km_noidung" name="km_noidung" placeholder="Nội dung khuyến mãi">
+    </div>
+    <div class="form-group">
+        <label for="km_tungay">Khuyến mãi từ ngày</label>
+        <input type="text" class="form-control" id="km_tungay" name="km_tungay" placeholder="Khuyến mãi từ ngày">
+    </div>
+    <div class="form-group">
+        <label for="km_denngay">Khuyến mãi đến ngày</label>
+        <input type="text" class="form-control" id="km_denngay" name="km_noidung" placeholder="Khuyến mãi đến ngày">
+    </div>
+
+    <button class="btn btn-primary" name="btnCapNhat">Cập nhật</button>
+</form>
+{% endblock %}
+{# End Nội dung trong block content #}
